@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaSave } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
+import { FaEye } from "react-icons/fa";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
 
@@ -74,9 +75,10 @@ const App = () => {
           <div>
             <h1
               onClick={() => navigate("/saved")}
-              className="text-black text-lg cursor-pointer"
+              className="text-black text-xl cursor-pointer flex flex-col items-center justify-center"
             >
-              <FaSave /> Saved Data
+              <FaEye
+              className="text-3xl"/> Check Data
             </h1>
           </div>
         </div>
@@ -174,22 +176,22 @@ const App = () => {
                 </div>
               </form>
             </div>
-            <div className="w-full md:w-1/2 p-8 bg-blue-50">
-              <h2 className="text-2xl font-bold mb-6">Contact Details</h2>
+            <div className="w-full md:w-1/2 p-8 bg-blue-500">
+              <h2 className="text-2xl font-bold mb-6 text-white">Contact Details</h2>
               <form className="space-y-4" onSubmit={handleSubmit}>
                 <div>
-                  <label className="block text-gray-700">Street + Nr</label>
+                  <label className="block text-gray-200">Street + Nr</label>
                   <input
                     type="text"
                     name="street"
                     value={formData.street}
                     onChange={handleChange}
                     required
-                    className="w-full mt-2 p-2 border rounded-md"
+                    className="w-full mt-2 p-2 border rounded-md bg-blue-500"
                   />
                 </div>
                 <div>
-                  <label className="block text-gray-700">
+                  <label className="block text-gray-200">
                     Additional Information
                   </label>
                   <input
@@ -197,77 +199,77 @@ const App = () => {
                     name="additionalInfo"
                     value={formData.additionalInfo}
                     onChange={handleChange}
-                    className="w-full mt-2 p-2 border rounded-md"
+                    className="w-full mt-2 p-2 border rounded-md bg-blue-500"
                   />
                 </div>
                 <div className="flex space-x-4">
                   <div className="w-1/2">
-                    <label className="block text-gray-700">Zip Code</label>
+                    <label className="block text-gray-200">Zip Code</label>
                     <input
                       type="text"
                       name="zipCode"
                       value={formData.zipCode}
                       onChange={handleChange}
                       required
-                      className="w-full mt-2 p-2 border rounded-md"
+                      className="w-full mt-2 p-2 border rounded-md bg-blue-500"
                     />
                   </div>
                   <div className="w-1/2">
-                    <label className="block text-gray-700">Place</label>
+                    <label className="block text-gray-200">Place</label>
                     <input
                       type="text"
                       name="place"
                       value={formData.place}
                       onChange={handleChange}
                       required
-                      className="w-full mt-2 p-2 border rounded-md"
+                      className="w-full mt-2 p-2 border rounded-md bg-blue-500"
                     />
                   </div>
                 </div>
                 <div>
-                  <label className="block text-gray-700">Country</label>
+                  <label className="block text-gray-200">Country</label>
                   <input
                     type="text"
                     name="country"
                     value={formData.country}
                     onChange={handleChange}
                     required
-                    className="w-full mt-2 p-2 border rounded-md"
+                    className="w-full mt-2 p-2 border rounded-md bg-blue-500"
                   />
                 </div>
                 <div className="flex space-x-4">
                   <div className="w-1/2">
-                    <label className="block text-gray-700">Code +</label>
+                    <label className="block text-gray-200">Code +</label>
                     <input
                       type="text"
                       name="code"
                       value={formData.code}
                       onChange={handleChange}
                       required
-                      className="w-full mt-2 p-2 border rounded-md"
+                      className="w-full mt-2 p-2 border rounded-md bg-blue-500"
                     />
                   </div>
                   <div className="w-1/2">
-                    <label className="block text-gray-700">Phone Number</label>
+                    <label className="block text-gray-200">Phone Number</label>
                     <input
                       type="text"
                       name="phoneNumber"
                       value={formData.phoneNumber}
                       onChange={handleChange}
                       required
-                      className="w-full mt-2 p-2 border rounded-md"
+                      className="w-full mt-2 p-2 border rounded-md bg-blue-500"
                     />
                   </div>
                 </div>
                 <div>
-                  <label className="block text-gray-700">Your Email</label>
+                  <label className="block text-gray-200">Your Email</label>
                   <input
                     type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full mt-2 p-2 border rounded-md"
+                    className="w-full mt-2 p-2 border rounded-md bg-blue-500"
                   />
                 </div>
                 <div className="flex items-center">
@@ -280,9 +282,9 @@ const App = () => {
                     required
                     className="mr-2"
                   />
-                  <label htmlFor="terms" className="text-gray-700">
+                  <label htmlFor="terms" className="text-gray-200">
                     I do accept the{" "}
-                    <a href="#" className="text-blue-500">
+                    <a href="#" className="text-white">
                       Terms and Conditions
                     </a>{" "}
                     of your site.
@@ -291,7 +293,7 @@ const App = () => {
                 <div>
                   <button
                     type="submit"
-                    className="w-full py-2 mt-4 bg-blue-600 text-white rounded-md"
+                    className="w-full py-2 mt-4 bg-white text-blue-600 rounded-3xl shadow-lg shadow-cyan-500/50"
                   >
                     Register Badge
                   </button>
